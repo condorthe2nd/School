@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 4
+   Case Problem 2
+   
+   Save your Fork Graphic Design Styles
+   Author: yitzy holtzberg
+   Date:   2/19/21
+
+   Filename: sf_effects.css
+
+*/
+
+
+/* Body Header Styles */
+
+body {
+    box-shadow: 10px 10px 50px rgb(51, 51, 51), -10px -10px 50px rgb(51, 51, 51);
+}
+
+
+/* Navigation Tabs List Styles */
+
+body header nav.tabs {
+    background-image: url(sf_back1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+body>header nav.tabs li {
+    /*  this is what the book wants me to write
+  perspective: 50px;
+    transform: rotateX(20deg);*/
+    /* this is kind of a cheat but it works */
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+body>header nav.tabs li :hover {
+    background-color: rgb(231, 231, 231);
+}
+
+
+/* Left Section Styles */
+
+section#left nav.vertical {
+    border: 1px solid rgb(20, 167, 170);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+section#left nav.vertical h1 {
+    border-top-left-radius: 23px;
+    border-top-right-radius: 23px;
+}
+
+
+/* Center Article Styles */
+
+section#center article {
+    background-image: radial-gradient(white 30%, rgb(151, 151, 151));
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 25px;
+}
+
+
+/* Blockquote Styles */
+
+blockquote {
+    background-image: url(sf_speech.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: drop-shadow(5px 5px 10px rgb(51, 51, 51));
+}
+
+cite img {
+    border-radius: 50%;
+}
