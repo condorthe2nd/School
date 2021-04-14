@@ -1,0 +1,26 @@
+public class Dog
+{
+    public String name;
+    public String breed;
+    public int age;
+    public void writeOutput()
+    {
+        sout("Name: " + name);
+        sout("Breed: " + breed);
+        sout("Age in calendar years: " + age);
+        sout("Age in human years: " + getAgeInHumanYears());
+        sout();
+    }
+    public int getAgeInHumanYears()
+    {
+        int humanAge = 0;
+        if(a<=2)
+    {
+        humanAge = age * 11;
+    }
+    else{
+        humanAge = 22 + ((age -2) * 5);
+    }
+    return humanAge;
+    }
+}
